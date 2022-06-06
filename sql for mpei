@@ -27,7 +27,7 @@ INSERT into album(name, group_id) values ("Мания величия", 3);
 select * from group;
 delete from group where id = 3;
 select * from group;
-select * from teacher where сreate_date <= 1800;
+select * from teacher where сreate_date <= 1990;
 
 select group.name, album.name from group, album where group.id == album.group_id;
 select * from album GROUP BY(group_id);
