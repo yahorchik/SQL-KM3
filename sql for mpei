@@ -1,0 +1,33 @@
+create table group (
+	id Integer PRIMARY KEY,
+	name varchar(255) not null
+);
+create table album (
+	id Integer PRIMARY KEY,
+	name varchar(255) not null,
+	group_id not null,
+	foreign key(group_id) references group(id)
+);
+insert into group(suname) values ("Metallica");
+insert into group(suname) values ("Depeche Mode");
+insert into group(suname) values ("Aria");
+alter table group add create_date;
+update group set create_date = 1986 where id = 1;
+select * from group;
+
+update group set create_date = 1990 where id = 2;
+update group set create_date = 1985 where id = 3;
+select * from group;
+
+select * from album
+INSERT into album(name, group_id) values ("MASTER OF PUPPETS", 1);
+INSERT into album(name, group_id) values ("Violator", 2);
+INSERT into album(name, group_id) values ("Мания величия", 3);
+
+select * from group;
+delete from group where id = 3;
+select * from group;
+select * from teacher where сreate_date <= 1800;
+
+select group.name, album.name from group, album where group.id == album.group_id;
+select * from album GROUP BY(group_id);
